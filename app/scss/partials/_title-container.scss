@@ -1,0 +1,47 @@
+.title-container {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-background-color-text-opposite, #2e2e2e);
+  background-color: var(--secondary-background-color, #fbfafa);
+  padding: 1em 0;
+
+  @include respond-at($bp-small) {
+    padding: 1.5em;
+  }
+  @include respond-at($bp-med) {
+    padding: 2em;
+  }
+  @include respond-at($bp-large) {
+    padding: 4em;
+  }
+}
+
+.title-container__content-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include respond-at($bp-small) {
+    width: 80%;
+  }
+  @include respond-at($bp-med) {
+    width: 65%;
+  }
+  @include respond-at($bp-large) {
+    width: 50%;
+  }
+
+  & h1 {
+    font-weight: 300;
+  }
+}
+
+.title-container__icon {
+  margin: 1em;
+}

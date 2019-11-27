@@ -1,0 +1,11 @@
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: var(--secondary-background-color, #fbfafa);
+  color: var(--secondary-background-color-text-opposite, #2e2e2e);
+  @include respond-at($bp-small) {
+    flex-direction: row;
+  }
+}

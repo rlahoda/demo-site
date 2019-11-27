@@ -1,0 +1,64 @@
+// reset
+@import "./partials/base/reset";
+
+// typography
+@import "./partials/base/typography";
+
+// global variables
+body {
+  --primary-background-color: #fff;
+  --primary-background-color-text-opposite: #2e2e2e;
+  --secondary-background-color: #fbfafa;
+  --secondary-background-color-text-opposite: #2e2e2e;
+  --primary-accent-color: #286782;
+  --primary-accent-color-darkened: #174558;
+  --primary-accent-color-text-opposite: #fff;
+}
+
+body.dark {
+  --primary-background-color: #2e2e2e;
+  --primary-background-color-text-opposite: #fff;
+  --secondary-background-color: #202020;
+  --secondary-background-color-text-opposite: #fff;
+  --primary-accent-color: #fff;
+  --primary-accent-color-darkened: #afafaf;
+  --primary-accent-color-text-opposite: #286782;
+}
+
+$bp-xsmall: 600px;
+$bp-small: 780px;
+$bp-med: 1060px;
+$bp-large: 1400px;
+
+// global mixins
+
+/* 
+Media Queries
+This one is used frequently to add breakpoints for responsive styling. It is set up using the "min-width" property so any value placed inside the mixin will be effective when the viewport width is met or exceeded. This means that when creating styles, be sure to have the base styles be whatever layout is desired for the smallest viewport and then add styles within the mixins at various widths to build out the layout for wider screen sizes. This corresponds to the "mobile first" philosophy of styling.
+*/
+@mixin respond-at($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  color: var(--primary-background-color-text-opposite);
+  background-color: var(--primary-background-color);
+}
+
+// general imports
+@import "./partials/utilities";
+@import "./partials/button";
+@import "./partials/hero";
+@import "./partials/nav";
+@import "./partials/title-container";
+@import "./partials/article-row";
+@import "./partials/footer";
