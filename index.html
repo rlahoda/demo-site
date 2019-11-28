@@ -47,24 +47,75 @@
       #Hotdogs</a
     >
     <header class="primary-header">
+      <div class="hero-shadow"></div>
       <div class="hero">
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
-        <div class="hero__image"></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo1.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo2.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo3.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo4.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo5.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo6.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo7.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo8.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo9.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo10.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo11.png');"
+        ></div>
+        <div
+          class="hero__image"
+          style="background-image: url('/assets/photo12.png');"
+        ></div>
       </div>
-      <nav class="primary-nav">
-        <a href="#">Menu</a><a href="#">Catering</a><a href="#">About Us</a
-        ><a href="#">Contact</a>
-      </nav>
+      <div class="nav-container">
+        <input
+          type="checkbox"
+          name="primary-nav__collapse"
+          id="primary-nav__collapse"
+          class="visually-hidden"
+        />
+        <label
+          for="primary-nav__collapse"
+          id="primary-nav__hamburger-button"
+          class="primary-button primary-button--thin primary-nav__hamburger-button"
+          >Menu</label
+        >
+        <nav class="primary-nav">
+          <a href="#">Menu</a><a href="#">Catering</a><a href="#">About Us</a
+          ><a href="#">Contact</a>
+        </nav>
+      </div>
     </header>
     <section class="title-container">
       <div class="title-container__content-container">
@@ -118,7 +169,11 @@
       </div>
     </section>
     <section class="flex-grid">
-      <article class="article-row">
+      <div
+        class="article-row__image-container article-row__item-1"
+        style="background-image: url(/assets/beef.png);"
+      ></div>
+      <article class="article-row article-row__item-2">
         <div class="article-row__content-container">
           <header><h2>Gourmet All Beef Hotdogs</h2></header>
           <p>
@@ -130,14 +185,10 @@
         </div>
       </article>
       <div
-        class="article-row__image-container"
-        style="background-image: url(/assets/beef.png);"
-      ></div>
-      <div
-        class="article-row__image-container"
+        class="article-row__image-container article-row__item-3"
         style="background-image: url(/assets/vegan.png);"
       ></div>
-      <article class="article-row">
+      <article class="article-row article-row__item-4">
         <div class="article-row__content-container">
           <header><h2>Vegan Hotdogs</h2></header>
           <p>
@@ -148,7 +199,11 @@
           </p>
         </div>
       </article>
-      <article class="article-row">
+      <div
+        class="article-row__image-container article-row__item-5"
+        style="background-image: url(/assets/veg.png);"
+      ></div>
+      <article class="article-row article-row__item-6">
         <div class="article-row__content-container">
           <header><h2>Vegetarian Hotdogs</h2></header>
           <p>
@@ -159,10 +214,6 @@
           </p>
         </div>
       </article>
-      <div
-        class="article-row__image-container"
-        style="background-image: url(/assets/veg.png);"
-      ></div>
     </section>
     <footer class="footer-main">
       <div class="footer__copyright">
