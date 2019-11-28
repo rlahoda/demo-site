@@ -29,15 +29,17 @@
   position: absolute;
   top: 15px;
   left: 15px;
+  z-index: 5;
 }
 
 #social-link {
   position: absolute;
   top: 15px;
   right: 15px;
-  color: var(--primary-accent-color-text-opposite, #fff);
+  color: #fff;
   display: flex;
   align-items: center;
+  z-index: 5;
 }
 
 .social-link__icon {
