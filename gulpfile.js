@@ -8,14 +8,14 @@ const sourcemaps = require("gulp-sourcemaps");
 
 function scss() {
   return (
-    src("./app/scss/**/*.scss")
+    src("./scss/**/*.scss")
       .pipe(sass())
       .on("error", sass.logError)
       // Use postcss with autoprefixer and compress the compiled file using cssnano
       .pipe(postcss([autoprefixer(), cssnano()]))
       // Now add/write the sourcemaps
       .pipe(sourcemaps.write())
-      .pipe(dest("app/css"))
+      .pipe(dest("./css"))
       .pipe(browserSync.stream())
   );
 }
@@ -29,12 +29,12 @@ exports.css = scss;
 exports.serve = function() {
   browserSync.init({
     server: {
-      baseDir: "./app"
+      baseDir: "./"
     }
   });
-  watch("app/scss/**/*.scss", { ignoreInitial: false }, scss);
-  watch("app/**/*.html", reload);
-  watch("app/**/*.js", reload);
+  watch("scss/**/*.scss", { ignoreInitial: false }, scss);
+  watch("**/*.html", reload);
+  watch("**/*.js", reload);
 };
 // const watch = () => watch(paths.scripts.src, gulp.series(scripts, reload));
 exports.default = parallel(scss);
